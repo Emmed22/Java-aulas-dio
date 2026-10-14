@@ -20,7 +20,9 @@ public class App {
       //Verificando se uma pessoa pode dirigir: 
       System.out.println("Quantos anos voce tem?");
       var idade = scanner.nextInt();
-      var canDrive= idade > 17;
+      System.out.println("Voce é emancipado? ");
+      var isEmancipated = scanner.nextBoolean(); //Ele vai aceitar resposta booleana
+      var canDrive= idade >= 18 || (isEmancipated && idade >= 16);
       System.out.printf("Voce pode dirigir? (%s) \n", canDrive);
 }
 }
